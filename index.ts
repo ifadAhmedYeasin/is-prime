@@ -1,6 +1,6 @@
 import { convertWordToNum } from "./utils";
 
-interface PrimeResult {
+export interface PrimeResult {
   prime: boolean;
   error?: string;
 }
@@ -11,7 +11,7 @@ interface PrimeResult {
  *
  * @param n - The value to check (number or string like "two", "7")
  * @param toNumber - Whether to convert word strings to numbers (default: true)
- * @returns Object with prime (boolean) and optional error message
+ * @returns Object with prime (boolean) and optional error message // {prime: boolean, error: string}
  * @example
  * isPrime(7)                    // returns { prime: true }
  * isPrime("two")                // returns { prime: false, error: "..." }
@@ -73,5 +73,15 @@ export function isPrime(
   if (num === 89) return { prime: true };
   if (num === 97) return { prime: true };
 
-  return { prime: false, error: `Cannot check if number (${n}) is prime` };
+  // change this range [important]
+  const range = 100;
+
+  if (num > range) {
+    return {
+      prime: false,
+      error: `Number ${n} exceeds the supported range (max: ${range})`,
+    };
+  }
+
+  return { prime: false };
 }

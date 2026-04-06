@@ -1,11 +1,14 @@
 {
 	"name": "@hprogrammers/is-prime",
 	"description": "Is it a prime number?",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"module": "index.ts",
 	"type": "module",
 	"exports": {
-		".": "./index.ts"
+		".": {
+			"types": "./index.ts",
+			"default": "./index.ts"
+		}
 	},
 	"devDependencies": {
 		"@types/bun": "latest"

@@ -1,4 +1,5 @@
-# is-prime [![npm](https://img.shields.io/npm/v/@hprogrammers/is-prime)](https://www.npmjs.com/package/@hprogrammers/is-prime)
+# is-prime ![NPM Version](https://img.shields.io/npm/v/%40hprogrammers%2Fis-prime)
+
 > Is 57 a prime number?
 > hopefully, { prime: false }
 
@@ -23,7 +24,7 @@ This is also a 1009% (as 1000 is not a prime) serious project like the [is-even]
 Prime not listed? We know. Wanna add it? Open an issue or PR - we're always looking for more primes to add to our database!
 
 ### Author
-**Hero Programmers**
+**Hero Programmers** ![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UC9w4fbaYiZYSF6wRozjk0nQ)
 
 ### License
 Copyright © 2026, [Hero Programmers](https://github.com/hero-programmers).
