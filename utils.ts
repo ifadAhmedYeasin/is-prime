@@ -1,3 +1,16 @@
+/**
+ * Converts a string representation of a number (words or digits) to a numeric value.
+ * Supports single words (e.g., "two"), compound numbers (e.g., "twenty one"),
+ * and large numbers (e.g., "one million", "two thousand").
+ * 
+ * @param input - The string to convert (e.g., "two", "100", "twenty one")
+ * @returns The numeric value, or false if conversion is not possible
+ * @example
+ * convertWordToNum("two")       // returns 2
+ * convertWordToNum("twenty one") // returns 21
+ * convertWordToNum("one thousand") // returns 1000
+ * convertWordToNum("hello")    // returns false
+ */
 export function convertWordToNum(input: string): number | boolean {
   const wordToNumberMap: Record<string, number> = {
     zero: 0,
