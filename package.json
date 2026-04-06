@@ -1,12 +1,29 @@
 {
-  "name": "is-prime",
-  "module": "index.ts",
-  "type": "module",
-  "private": true,
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
-  }
+	"name": "@hp/is-prime",
+	"description": "Is it a prime number?",
+	"version": "1.0.0",
+	"module": "index.ts",
+	"type": "module",
+	"exports": {
+		".": "./index.ts"
+	},
+	"devDependencies": {
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hero-programmers/is-prime.git"
+	},
+	"keywords": [
+		"even"
+	],
+	"author": "Hero Programmers",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/hero-programmers/is-prime/issues"
+	},
+	"homepage": "https://github.com/hero-programmers/is-prime#readme"
 }

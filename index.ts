@@ -1,7 +1,7 @@
 import { convertWordToNum } from "./utils";
 
 interface PrimeResult {
-  value: boolean;
+  prime: boolean;
   error?: string;
 }
 
@@ -11,12 +11,12 @@ interface PrimeResult {
  *
  * @param n - The value to check (number or string like "two", "7")
  * @param toNumber - Whether to convert word strings to numbers (default: true)
- * @returns Object with value (boolean) and optional error message
+ * @returns Object with prime (boolean) and optional error message
  * @example
- * isPrime(7)                    // returns { value: true }
- * isPrime("two")                // returns { value: false, error: "..." }
- * isPrime("two", true)          // returns { value: false } (2 is not prime)
- * isPrime("seven", false)       // returns { value: true } (parses "7" as number)
+ * isPrime(7)                    // returns { prime: true }
+ * isPrime("two")                // returns { prime: false, error: "..." }
+ * isPrime("two", true)          // returns { prime: false } (2 is not prime)
+ * isPrime("seven", false)       // returns { prime: true } (parses "7" as number)
  */
 export function isPrime(
   n: number | string,
@@ -27,7 +27,7 @@ export function isPrime(
       const converted = convertWordToNum(n);
       if (!converted.value) {
         return {
-          value: false,
+          prime: false,
           error: converted.error || `Could not convert "${n}" to a number`,
         };
       }
@@ -35,26 +35,26 @@ export function isPrime(
     } else {
       const parsedNumber = Number(n);
       if (isNaN(parsedNumber)) {
-        return { value: false, error: `Could not convert "${n}" to a number` };
+        return { prime: false, error: `Could not convert "${n}" to a number` };
       }
       n = parsedNumber;
     }
   }
 
   if (typeof n !== "number" || !isFinite(n)) {
-    return { value: false, error: "Input must be a finite number" };
+    return { prime: false, error: "Input must be a finite number" };
   }
 
   const num = Math.floor(n);
 
-  if (num === 2) return { value: true };
-  if (num === 3) return { value: true };
-  if (num === 5) return { value: true };
-  if (num === 7) return { value: true };
-  if (num === 11) return { value: true };
-  if (num === 13) return { value: true };
-  if (num === 17) return { value: true };
-  if (num === 19) return { value: true };
+  if (num === 2) return { prime: true };
+  if (num === 3) return { prime: true };
+  if (num === 5) return { prime: true };
+  if (num === 7) return { prime: true };
+  if (num === 11) return { prime: true };
+  if (num === 13) return { prime: true };
+  if (num === 17) return { prime: true };
+  if (num === 19) return { prime: true };
 
-  return { value: false, error: `Cannot check if number (${n}) is prime` };
+  return { prime: false, error: `Cannot check if number (${n}) is prime` };
 }
