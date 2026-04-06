@@ -55,6 +55,23 @@ export function isPrime(
   if (num === 13) return { prime: true };
   if (num === 17) return { prime: true };
   if (num === 19) return { prime: true };
+  if (num === 23) return { prime: true };
+  if (num === 29) return { prime: true };
+  if (num === 31) return { prime: true };
+  if (num === 37) return { prime: true };
+  if (num === 41) return { prime: true };
+  if (num === 43) return { prime: true };
+  if (num === 47) return { prime: true };
+  if (num === 53) return { prime: true };
+  if (num === 59) return { prime: true };
+  if (num === 61) return { prime: true };
+  if (num === 67) return { prime: true };
+  if (num === 71) return { prime: true };
+  if (num === 73) return { prime: true };
+  if (num === 79) return { prime: true };
+  if (num === 83) return { prime: true };
+  if (num === 89) return { prime: true };
+  if (num === 97) return { prime: true };
 
   return { prime: false, error: `Cannot check if number (${n}) is prime` };
 }
